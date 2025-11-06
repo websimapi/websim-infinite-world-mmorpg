@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Infinite World MMORPG</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://esm.sh/three",
+                "nipplejs": "https://esm.sh/nipplejs"
+            }
+        }
+    </script>
+</head>
+<body>
+    <canvas id="game-canvas"></canvas>
+
+    <div id="ui-container">
+        <div id="joystick-zone"></div>
+
+        <div id="chat-controls">
+            <input type="text" id="command-input" placeholder="Type or say '/add block at 1,1'">
+            <button id="mic-button">🎤</button>
+        </div>
+
+        <div id="settings-toggle">⚙️</div>
+        <div id="settings-panel" class="hidden">
+            <h3>Settings</h3>
+            <div id="player-coords">X: 0, Y: 0, Z: 0</div>
+            <div class="setting">
+                <label for="localstorage-toggle">Use Local Storage</label>
+                <input type="checkbox" id="localstorage-toggle">
+            </div>
+            <button id="delete-local-storage">Delete Local Storage</button>
+        </div>
+        <div id="loading-spinner" class="hidden"></div>
+    </div>
+
+    <script type="module" src="main.js"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
+
